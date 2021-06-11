@@ -1,0 +1,245 @@
+body{
+    display: flex;
+    flex-direction: column;
+    background-color:beige;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'PT Serif', serif;
+}
+
+h2{
+    margin-left: 15px;
+}
+
+
+.cabecalho{
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    height: 80px;
+    width: 100%;
+    background-color: rgb(71, 88, 87);
+    display: flex;
+    border-bottom:solid 4px rgb(74, 214, 233) ;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cabecalho a{
+    font-size: 1.1em;
+    color: white;
+    padding: 15px;
+    text-decoration: none;
+}
+
+.cabecalho img{
+    height: 80px;
+}
+
+.menu{
+    flex-grow: 2;
+}
+.menu ul{
+    margin: 0;
+    margin-left: 0px;
+    display: flex;
+    justify-content: flex-start;   
+    align-items: flex-start;
+}
+
+ul{
+    list-style: none;
+}
+.menu li{
+    margin: 0 10px;
+    padding: 15px;
+}
+
+.menu a:hover{
+    border-radius: 20px;
+    background-color: rgb(95, 231, 231);
+    color: black;
+}
+
+
+/*Anchor*/
+.anchor{ 
+    position:relative;
+    font-size: 1.1em;
+}
+.anchor span{ position:absolute; top:-100px;}
+/**/
+.login{
+    margin-right: 20px;
+}
+
+.login a{
+    font-size: 1.1em;
+    text-decoration: none;
+    color: white;
+    padding: 15px;
+}
+
+#login{
+    background-color: rgb(206, 97, 119);
+    border-radius: 20px;
+}
+
+#login:hover,
+#cadastro:hover{
+    background-color: rgb(95, 231, 231);
+    border-radius: 20px;
+    color: black;
+}
+/* Produtos */
+.produtos{ 
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: space-around;
+    margin-bottom: 10px;
+}
+ 
+#prod{
+    margin-bottom: 0;
+}
+
+.produto{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(185, 201, 168);
+    border-radius: 20px;
+    margin-top: 30px;
+    box-shadow: 0 0 1em black;
+    height: 60vh;
+    width: 20vw;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.produto img{
+    margin-top: 3px;
+    width: 50%;
+}
+
+.produto h5{
+    padding: 0;
+    margin: 0;
+}
+
+.produto p{
+    display: inline-block;
+    padding-left: 6px ;
+}
+
+.curso-preco{
+    display: flex;
+    font-size: 1em;
+    justify-content: flex-end;
+    align-items: baseline;
+    padding: 5px;
+    align-self: flex-end;
+}
+
+.preco-de{
+    color: firebrick;
+    text-decoration: line-through;
+    padding: 2px;
+}
+
+.preco-por{
+    padding: 2px;
+    color: green;
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+.produto-info p{
+    font-size: 0.8em;
+}
+
+.produto-info h5{
+    text-align: center;
+    font-size: 1.1em;
+}
+
+/* Rodapé */
+.rodape{
+    background-color: rgb(71, 88, 87);
+    border-top: solid 3px black;
+    display: flex;
+    flex-direction: row;
+    height: 15vh;
+    align-items: center;
+    margin-top: 15px;
+    overflow: hidden;
+    min-height: 90px;
+}
+
+.rodape img{
+    height: 120px;
+}
+
+.menuFooter{
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-around;
+}
+
+.rodape ul{
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+
+.rodape li{
+    font-weight: normal;
+    padding-left: 10px;
+    padding-top: 3px;
+}
+
+.rodape li:hover{
+    text-decoration: underline rgb(95, 231, 231);
+}
+
+.contact{
+    padding: 5px;
+    margin: 3px 0px;
+}
+.contact a{
+    text-decoration: none;
+    color: black;
+}
+
+@media (max-width:1106px){
+    .login{
+        display: none;
+    }
+}
+
+@media (max-width:880px){
+    .menu{
+        display: none;
+    }
+}
+
+@media (max-width:930px){
+    .menuFooter{
+        display: none;
+    }
+}
+
+.menu a.selected{
+    background-color: rgb(45, 148, 148);
+    color: black;
+    border-radius: 20px;
+}
+
+.menuFooter ul{
+    padding-left: 50px;
+    border-left: solid 2px black;
+}
